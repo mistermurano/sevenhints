@@ -1,0 +1,53 @@
+<%= form_for(@card) do |f| %>
+  <% if @card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@card.errors.count, "error") %> prohibited this card from being saved:</h2>
+
+      <ul>
+      <% @card.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.text_field :category %>
+  </div>
+  <div class="field">
+    <%= f.label :hint1 %><br>
+    <%= f.text_field :hint1 %>
+  </div>
+  <div class="field">
+    <%= f.label :hint2 %><br>
+    <%= f.text_field :hint2 %>
+  </div>
+  <div class="field">
+    <%= f.label :hint3 %><br>
+    <%= f.text_field :hint3 %>
+  </div>
+  <div class="field">
+    <%= f.label :hint4 %><br>
+    <%= f.text_field :hint4 %>
+  </div>
+  <div class="field">
+    <%= f.label :hint5 %><br>
+    <%= f.text_field :hint5 %>
+  </div>
+  <div class="field">
+    <%= f.label :hint6 %><br>
+    <%= f.text_field :hint6 %>
+  </div>
+  <div class="field">
+    <%= f.label :hint7 %><br>
+    <%= f.text_field :hint7 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
